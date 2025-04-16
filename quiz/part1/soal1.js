@@ -1,7 +1,15 @@
 //cek apakah angka yang dikirim adalah angka prima atau bukan?
 //cek google bagi yang ga tau apa itu angka prima
 function angkaPrima(angka) {
-    let angka = "";
+    if (angka <= 1) {
+        return false;
+    }
+    for (let i = 2; i < angka; i++) {
+        if (angka % i === 0) {
+            return false
+        }
+    }
+    return true;
   }
   
   // TEST CASES
